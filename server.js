@@ -31,9 +31,6 @@ app.get('/', (req, res) => {
   });
 });
 
-// Rutas de participantes
-app.use('/api', participantesRoutes);
-
 // Manejo de rutas no encontradas
 app.use((req, res) => {
   res.status(404).json({ 
