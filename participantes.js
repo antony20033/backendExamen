@@ -4,7 +4,7 @@ const router = express.Router();
 const db = require('./db');
 
 // 1️⃣ Listado completo con búsqueda opcional
-router.get('/listado', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const query = req.query.q;
 
