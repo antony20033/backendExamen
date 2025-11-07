@@ -9,11 +9,11 @@ if (process.env.DATABASE_URL) {
 } else {
   // Si no, usamos las variables individuales
   config = {
-    host: process.env.MYSQLHOST || process.env.DB_HOST || 'mysql.railway.internal',
+    host: process.env.MYSQLHOST || process.env.DB_HOST || 'trolley.proxy.rlwy.net',
     user: process.env.MYSQLUSER || process.env.DB_USER || 'root',
     password: process.env.MYSQLPASSWORD || process.env.DB_PASS,
     database: process.env.MYSQLDATABASE || process.env.DB_NAME || 'railway',
-    port: process.env.MYSQLPORT || process.env.DB_PORT || 3306,
+    port: process.env.MYSQLPORT || process.env.DB_PORT || 33972,
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
