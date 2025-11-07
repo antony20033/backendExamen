@@ -38,7 +38,7 @@ router.get('/', async (req, res) => {
 });
 
 // 2️⃣ Obtener participante por ID
-router.get('/participante/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     
@@ -64,7 +64,7 @@ router.get('/participante/:id', async (req, res) => {
 });
 
 // 3️⃣ Registrar nuevo participante
-router.post('/registro', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const { nombre, apellidos, email, twitter, enlace, ocupacion, avatar } = req.body;
 
@@ -103,7 +103,7 @@ router.post('/registro', async (req, res) => {
 });
 
 // 4️⃣ EXTRA: Actualizar participante
-router.put('/participante/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const { nombre, apellidos, email, twitter, enlace, ocupacion, avatar } = req.body;
@@ -133,7 +133,7 @@ router.put('/participante/:id', async (req, res) => {
 });
 
 // 5️⃣ EXTRA: Eliminar participante
-router.delete('/participante/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     
